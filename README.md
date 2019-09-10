@@ -1,4 +1,4 @@
-[![dependencies Status](https://david-dm.org/gemst1io/api/status.svg?style=flat-square)](https://david-dm.org/gemst1io/api)
+[![dependencies Status](https://david-dm.org/gemst1io/api/status.svg?style=flat-square)](https://david-dm.org/gemst1io/api) [![Greenkeeper badge](https://badges.greenkeeper.io/gemst1io/api.svg)](https://greenkeeper.io/)
 
 # gemstone-api
 
