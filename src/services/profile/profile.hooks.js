@@ -1,26 +1,25 @@
-const { authenticate } = require("@feathersjs/authentication").hooks;
-const verifyHooks = require("feathers-authentication-management").hooks;
-const commonHooks = require("feathers-hooks-common");
-const hooks = require("feathers-authentication-hooks");
+const { authenticate } = require('@feathersjs/authentication').hooks
+const commonHooks = require('feathers-hooks-common')
+const hooks = require('feathers-authentication-hooks')
 
 module.exports = {
   before: {
     all: [],
     find: [],
     get: [],
-    create: [commonHooks.disallow("external")],
-    update: [commonHooks.disallow("external")],
+    create: [commonHooks.disallow('external')],
+    update: [commonHooks.disallow('external')],
     patch: [
       commonHooks.iff(
-        commonHooks.isProvider("external"),
-        commonHooks.preventChanges(true, "username", "userId"),
-        authenticate("jwt"),
+        commonHooks.isProvider('external'),
+        commonHooks.preventChanges(true, 'username', 'userId'),
+        authenticate('jwt'),
         hooks.restrictToOwner({
-          ownerField: "userId"
+          ownerField: 'userId'
         })
       )
     ],
-    remove: [commonHooks.disallow("external")]
+    remove: [commonHooks.disallow('external')]
   },
 
   after: {
@@ -42,4 +41,4 @@ module.exports = {
     patch: [],
     remove: []
   }
-};
+}

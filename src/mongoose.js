@@ -1,12 +1,12 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose')
 
 module.exports = function(app) {
-  mongoose.connect(app.get("mongodb"), {
+  mongoose.connect(app.get('mongodb'), {
     useCreateIndex: true,
     useNewUrlParser: true
-  });
-  mongoose.Promise = global.Promise;
+  })
+  mongoose.Promise = global.Promise
   //mongoose.set("debug", true);
 
-  app.set("mongooseClient", mongoose);
-};
+  app.set('mongooseClient', mongoose)
+}

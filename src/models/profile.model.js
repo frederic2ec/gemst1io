@@ -3,8 +3,8 @@
 // See http://mongoosejs.com/docs/models.html
 // for more of what you can do here.
 module.exports = function(app) {
-  const mongooseClient = app.get("mongooseClient");
-  const { Schema } = mongooseClient;
+  const mongooseClient = app.get('mongooseClient')
+  const { Schema } = mongooseClient
   const profile = new Schema(
     {
       pictureUrl: { type: String, required: true },
@@ -13,7 +13,7 @@ module.exports = function(app) {
       title: { type: String },
       userId: {
         type: Schema.Types.ObjectId,
-        ref: "users",
+        ref: 'users',
         unique: true,
         required: true
       },
@@ -22,7 +22,7 @@ module.exports = function(app) {
     {
       timestamps: true
     }
-  );
+  )
 
-  return mongooseClient.model("profile", profile);
-};
+  return mongooseClient.model('profile', profile)
+}

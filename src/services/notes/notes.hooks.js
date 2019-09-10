@@ -1,29 +1,29 @@
-const { authenticate } = require("@feathersjs/authentication").hooks;
-const hooks = require("feathers-authentication-hooks");
-const commonHooks = require("feathers-hooks-common");
+const { authenticate } = require('@feathersjs/authentication').hooks
+const hooks = require('feathers-authentication-hooks')
+const commonHooks = require('feathers-hooks-common')
 
 module.exports = {
   before: {
-    all: [authenticate("jwt")],
-    find: [hooks.restrictToOwner({ ownerField: "owner" })],
-    get: [hooks.restrictToOwner({ ownerField: "owner" })],
+    all: [authenticate('jwt')],
+    find: [hooks.restrictToOwner({ ownerField: 'owner' })],
+    get: [hooks.restrictToOwner({ ownerField: 'owner' })],
     create: [
       hooks.associateCurrentUser({
-        as: "owner"
+        as: 'owner'
       })
     ],
-    update: [commonHooks.disallow("external")],
+    update: [commonHooks.disallow('external')],
     patch: [
       commonHooks.iff(
-        commonHooks.isProvider("external"),
-        commonHooks.preventChanges(true, "owner"),
-        authenticate("jwt"),
+        commonHooks.isProvider('external'),
+        commonHooks.preventChanges(true, 'owner'),
+        authenticate('jwt'),
         hooks.restrictToOwner({
-          ownerField: "owner"
+          ownerField: 'owner'
         })
       )
     ],
-    remove: [hooks.restrictToOwner({ ownerField: "owner" })]
+    remove: [hooks.restrictToOwner({ ownerField: 'owner' })]
   },
 
   after: {
@@ -45,4 +45,4 @@ module.exports = {
     patch: [],
     remove: []
   }
-};
+}

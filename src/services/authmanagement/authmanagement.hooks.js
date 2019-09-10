@@ -1,5 +1,3 @@
-
-
 module.exports = {
   before: {
     all: [],
@@ -30,4 +28,4 @@ module.exports = {
     patch: [],
     remove: []
   }
-};
+}

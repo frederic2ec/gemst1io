@@ -24,7 +24,7 @@
   },
   "scripts": {
     "test": "npm run eslint && NODE_ENV= npm run jest",
-    "eslint": "eslint src/. test/. --config .eslintrc.json",
+    "eslint": "eslint src/. test/. --config .eslintrc.json --fix",
     "dev": "nodemon src/",
     "start": "node src/",
     "jest": "jest"
@@ -57,9 +57,14 @@
     "winston": "^3.2.1"
   },
   "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^10.0.3",
     "eslint": "^5.16.0",
+    "eslint-config-prettier": "^6.3.0",
+    "eslint-plugin-prettier": "^3.1.0",
     "jest": "^24.8.0",
     "nodemon": "^1.19.1",
+    "prettier": "^1.18.2",
     "request": "^2.88.0",
     "request-promise": "^4.2.4"
   }
