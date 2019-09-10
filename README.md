@@ -1,4 +1,5 @@
 [![dependencies Status](https://david-dm.org/gemst1io/api/status.svg?style=flat-square)](https://david-dm.org/gemst1io/api)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/44dacd7e640943fda1d7731b9d2b5577)](https://www.codacy.com/manual/gemst1io/api?utm_source=github.com&utm_medium=referral&utm_content=gemst1io/api&utm_campaign=Badge_Grade)
 
 # gemstone-api
 
