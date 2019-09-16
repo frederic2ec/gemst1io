@@ -65,11 +65,7 @@ module.exports = {
           userId: context.result._id,
           username: context.result.username,
           pictureUrl:
-            'https://s3.amazonaws.com/37assets/svn/765-default-avatar.png',
-          offlineUrl:
-            'https://i2.wp.com/streamplaygraphics.com/wp-content/uploads/edd/2018/02/onslaught-offline-banner-02.png',
-          bannerUrl:
-            'https://marketplace.canva.com/MADOPhuW_os/1/0/thumbnail_large-1/canva-photo-background-twitch-banner-MADOPhuW_os.jpg'
+            'https://s3.amazonaws.com/37assets/svn/765-default-avatar.png'
         })
         context.result.UserDetails = userDetails
         return context

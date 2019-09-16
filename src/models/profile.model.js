@@ -8,9 +8,6 @@ module.exports = function(app) {
   const profile = new Schema(
     {
       pictureUrl: { type: String, required: true },
-      bannerUrl: { type: String, required: true },
-      offlineUrl: { type: String, required: true },
-      title: { type: String },
       userId: {
         type: Schema.Types.ObjectId,
         ref: 'users',
