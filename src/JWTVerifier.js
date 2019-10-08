@@ -8,13 +8,13 @@ class JWTVerifier extends jwt.Verifier {
       {
         _id: payload.userId
       },
-      '_id username email'
-    ).lean();
+      '_id username email isVerified'
+    ).lean()
 
-    payload.user = user;
+    payload.user = user
 
-    done(null, user, payload);
+    done(null, user, payload)
   }
 }
 
-module.exports = JWTVerifier;
+module.exports = JWTVerifier
