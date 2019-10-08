@@ -11,7 +11,7 @@ module.exports = function(app) {
 
   // Set up authentication with the secret
   app.configure(authentication(config))
-  app.configure(
+  /* app.configure(
     jwt({
       Verifier: JWTVerifier
     })
@@ -20,7 +20,7 @@ module.exports = function(app) {
     local({
       Verifier: LocalVerifier
     })
-  )
+  ) */
 
   // The `authentication` service is used to create a JWT.
   // The before `create` hook registers strategies that can be used
@@ -32,6 +32,20 @@ module.exports = function(app) {
         verifyHooks.isVerified()
       ],
       remove: [authentication.hooks.authenticate('jwt')]
+    },
+    after: {
+      create: [
+        context => {
+          // Add the user to the result response
+          context.result.user = context.params.user
+          // Don't expose sensitive information.
+          delete context.result.user.password
+          delete context.result.user.resetExpires
+          delete context.result.user.resetToken
+          delete context.result.user.verifyExpires
+          delete context.result.user.verifyToken
+        }
+      ]
     }
   })
 }
