@@ -38,7 +38,15 @@ module.exports = {
         commonHooks.disallow('external')
       )
     ],
-    remove: [commonHooks.disallow('external')]
+    remove: [
+      commonHooks.iff(
+        commonHooks.isProvider('external'),
+        authenticate('jwt'),
+        hooks.restrictToOwner({
+          ownerField: '_id'
+        })
+      )
+    ]
   },
 
   after: {
@@ -73,7 +81,29 @@ module.exports = {
     ],
     update: [],
     patch: [],
-    remove: []
+    remove: [
+      async function(context) {
+        const profileCleanup = await context.app
+          .service('profile')
+          .remove(null, { query: { userId: context.result._id } })
+
+        const notebookCleanup = await context.app
+          .service('notebook')
+          .remove(null, { query: { owner: context.result._id } })
+
+        const notesCleanup = await context.app
+          .service('notes')
+          .remove(null, { query: { owner: context.result._id } })
+
+        context.result.notesCleanup = notesCleanup
+
+        context.result.notebookCleanup = notebookCleanup
+
+        context.result.profileCleanup = profileCleanup
+
+        return context
+      }
+    ]
   },
 
   error: {

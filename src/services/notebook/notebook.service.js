@@ -7,7 +7,8 @@ module.exports = function(app) {
   const Model = createModel(app)
 
   const options = {
-    Model
+    Model,
+    multi: true
   }
 
   // Initialize our service with any options it requires
