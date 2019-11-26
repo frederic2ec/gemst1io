@@ -1,3 +1,4 @@
+require('dotenv').config()
 const path = require('path')
 const favicon = require('serve-favicon')
 const compress = require('compression')
@@ -5,6 +6,8 @@ const helmet = require('helmet')
 const cors = require('cors')
 const logger = require('./logger')
 process.env['NODE_CONFIG_DIR'] = path.join(__dirname, '../config/')
+
+require('spm-agent-nodejs')
 
 const feathers = require('@feathersjs/feathers')
 const configuration = require('@feathersjs/configuration')
