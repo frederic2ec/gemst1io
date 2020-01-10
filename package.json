@@ -56,7 +56,6 @@
     "morgan-json": "^1.1.0",
     "nodemailer-smtp-transport": "^2.7.4",
     "serve-favicon": "^2.5.0",
-    "spm-agent-nodejs": "^2.0.4",
     "winston": "^3.2.1",
     "winston-logsene": "^2.0.7"
   },

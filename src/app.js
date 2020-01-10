@@ -7,8 +7,6 @@ const cors = require('cors')
 const logger = require('./logger')
 process.env['NODE_CONFIG_DIR'] = path.join(__dirname, '../config/')
 
-require('spm-agent-nodejs')
-
 const feathers = require('@feathersjs/feathers')
 const configuration = require('@feathersjs/configuration')
 const express = require('@feathersjs/express')
@@ -28,12 +26,12 @@ const mongoose = require('./mongoose')
 const app = express(feathers())
 
 // feathers-blob service
-const blobService = require('feathers-blob')
+// const blobService = require('feathers-blob')
 // Here we initialize a FileSystem storage,
 // but you can use feathers-blob with any other
 // storage service like AWS or Google Drive.
-const fs = require('fs-blob-store')
-const blobStorage = fs(__dirname + '/uploads')
+// const fs = require('fs-blob-store')
+// const blobStorage = fs(__dirname + '/uploads')
 
 // Load app configuration
 app.configure(configuration())
@@ -45,7 +43,7 @@ app.use(express.json({ limit: '10mb' }))
 app.use(express.urlencoded({ limit: '10mb', extended: true }))
 app.use(favicon(path.join(__dirname, '../public/', 'favicon.ico')))
 // Host the public folder
-app.use('/', express.static(path.join(__dirname, '../public/')))
+// app.use('/', express.static(path.join(__dirname, '../public/')))
 
 // Set up Plugins and providers
 app.configure(express.rest())
@@ -61,7 +59,7 @@ app.configure(services)
 // Set up event channels (see channels.js)
 app.configure(channels)
 // Upload Service
-app.use('/uploads', blobService({ Model: blobStorage }))
+//app.use('/uploads', blobService({ Model: blobStorage }))
 
 // Configure a middleware for 404s and the error handler
 app.use(express.notFound())
