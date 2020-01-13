@@ -51,7 +51,7 @@
     "helmet": "^3.21.2",
     "lodash": "^4.17.15",
     "mongodb-core": "^3.2.7",
-    "mongoose": "^5.7.8",
+    "mongoose": "^5.8.7",
     "morgan": "^1.9.1",
     "morgan-json": "^1.1.0",
     "nodemailer-smtp-transport": "^2.7.4",
