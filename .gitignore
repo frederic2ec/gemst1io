@@ -113,3 +113,9 @@ data/
 .env
 now.json
 nowv2.json
+
+# Nuxt
+.nuxt
+sw.*
+client/static/favicon.ico
+client/static/icons/*
