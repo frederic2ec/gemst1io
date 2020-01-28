@@ -5250,7 +5250,7 @@ feathers-authentication-management@^2.0.1:
     debug "^3.0.0"
     feathers-hooks-common "^4.14.1"
 
-feathers-blob@^2.1.0:
+feathers-blob@^2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/feathers-blob/-/feathers-blob-2.2.0.tgz#232fd3efb7de8fbc6b194e7ae1aea3d067569957"
   integrity sha512-3U39G2T/DncklHylj7DgNHsEAPQnvxxq5cXsma0fPrB0zlLXbKRpWMB4XyKksqqwoXHUgkI5uFUCbKLoW1x30w==

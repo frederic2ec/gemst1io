@@ -62,7 +62,7 @@
     "express": "^4.17.1",
     "feathers-authentication-hooks": "^0.3.1",
     "feathers-authentication-management": "^2.0.1",
-    "feathers-blob": "^2.1.0",
+    "feathers-blob": "^2.2.0",
     "feathers-hooks-common": "^4.20.7",
     "feathers-mailer": "^3.0.1",
     "feathers-mongoose": "^8.1.0",
