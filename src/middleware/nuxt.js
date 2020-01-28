@@ -3,7 +3,6 @@ const { Nuxt, Builder } = require('nuxt')
 const nuxtConfig = require('../../nuxt.config')
 nuxtConfig.rootDir = path.resolve(__dirname, '../..')
 nuxtConfig.dev = process.env.NODE_ENV !== 'production'
-console.log('node env' + process.env.NODE_ENV)
 
 const nuxt = new Nuxt(nuxtConfig)
 
