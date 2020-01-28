@@ -836,7 +836,7 @@
     lodash.pick "^4.4.0"
     passport-jwt "^4.0.0"
 
-"@feathersjs/authentication-local@^1.0.4", "@feathersjs/authentication-local@^1.2.9":
+"@feathersjs/authentication-local@^1.0.4":
   version "1.2.9"
   resolved "https://registry.yarnpkg.com/@feathersjs/authentication-local/-/authentication-local-1.2.9.tgz#4467230db1775124794efcceb4901efc4568f824"
   integrity sha512-EqUuUgiULpfe46oprIeHkY4CjlWIT+abtMnVOOeRmaJTPRDnPe72wJoQ3jomSTJpr7KARkWog6sAUZa+NMC3UA==
@@ -846,6 +846,18 @@
     debug "^4.0.0"
     lodash "^4.17.5"
     passport-local "^1.0.0"
+
+"@feathersjs/authentication-local@^4.5.1":
+  version "4.5.1"
+  resolved "https://registry.yarnpkg.com/@feathersjs/authentication-local/-/authentication-local-4.5.1.tgz#3da34b69b2fcb456b716f25e1f8a1e8dc206ca99"
+  integrity sha512-OknNC7+jnMJOuuFRlPt9wKMvwQMV6n+GSEyJhGH1fE7R86hXlPTqTApPcp2g6zswuLmsyv6HEgv2eYF7kX5LCQ==
+  dependencies:
+    "@feathersjs/authentication" "^4.5.1"
+    "@feathersjs/errors" "^4.5.1"
+    "@feathersjs/feathers" "^4.5.1"
+    bcryptjs "^2.4.3"
+    debug "^4.1.1"
+    lodash "^4.17.15"
 
 "@feathersjs/authentication@^2.1.16":
   version "2.1.16"
@@ -865,6 +877,21 @@
     ms "^2.0.0"
     passport "^0.4.0"
     uuid "^3.1.0"
+
+"@feathersjs/authentication@^4.5.1":
+  version "4.5.1"
+  resolved "https://registry.yarnpkg.com/@feathersjs/authentication/-/authentication-4.5.1.tgz#5e3cc7044399f9aa4c5f50c82d2d448278218d49"
+  integrity sha512-Z9YxsMd86lNol/C2zPFtQTfzidvQeT8y0ds/dJagSuswbb5NoRnn7BFoOWlJSa7QiiI+KZ6h7JIOPfLmU+T0DA==
+  dependencies:
+    "@feathersjs/errors" "^4.5.1"
+    "@feathersjs/feathers" "^4.5.1"
+    "@feathersjs/transport-commons" "^4.5.1"
+    "@types/jsonwebtoken" "^8.3.7"
+    debug "^4.1.1"
+    jsonwebtoken "^8.5.1"
+    lodash "^4.17.15"
+    long-timeout "^0.1.1"
+    uuid "^3.4.0"
 
 "@feathersjs/commons@^1.4.0":
   version "1.4.4"
@@ -965,7 +992,7 @@
     socket.io "^2.1.0"
     uberproto "^2.0.1"
 
-"@feathersjs/transport-commons@^4.2.1":
+"@feathersjs/transport-commons@^4.2.1", "@feathersjs/transport-commons@^4.5.1":
   version "4.5.1"
   resolved "https://registry.yarnpkg.com/@feathersjs/transport-commons/-/transport-commons-4.5.1.tgz#55bd9bb298fe0d3f9ab612855065be84013827c4"
   integrity sha512-qgTeluk/+8CsSySrp138RLJbToik/lxLWjrVugpWku1JIYkWc9/IqvevH6B4MZrcNkS9lEwj7WAZq/AYOjiUqw==
@@ -1748,6 +1775,13 @@
   version "7.0.4"
   resolved "https://registry.yarnpkg.com/@types/json-schema/-/json-schema-7.0.4.tgz#38fd73ddfd9b55abb1e1b2ed578cb55bd7b7d339"
   integrity sha512-8+KAKzEvSUdeo+kmqnKrqgeE+LcA0tjYWFY7RPProVYwnqDjukzO+3b6dLD56rYX5TdWejnEOLJYOIeh4CXKuA==
+
+"@types/jsonwebtoken@^8.3.7":
+  version "8.3.7"
+  resolved "https://registry.yarnpkg.com/@types/jsonwebtoken/-/jsonwebtoken-8.3.7.tgz#ab79ad55b9435834d24cca3112f42c08eedb1a54"
+  integrity sha512-B5SSifLkjB0ns7VXpOOtOUlynE78/hKcY8G8pOAhkLJZinwofIBYqz555nRj2W9iDWZqFhK5R+7NZDaRmKWAoQ==
+  dependencies:
+    "@types/node" "*"
 
 "@types/linkify-it@*":
   version "2.1.0"
@@ -2701,7 +2735,7 @@ bcrypt-pbkdf@^1.0.0:
   dependencies:
     tweetnacl "^0.14.3"
 
-bcryptjs@^2.3.0:
+bcryptjs@^2.3.0, bcryptjs@^2.4.3:
   version "2.4.3"
   resolved "https://registry.yarnpkg.com/bcryptjs/-/bcryptjs-2.4.3.tgz#9ab5627b93e60621ff7cdac5da9733027df1d0cb"
   integrity sha1-mrVie5PmBiH/fNrF2pczAn3x0Ms=
@@ -7326,7 +7360,7 @@ jsonfile@^4.0.0:
   optionalDependencies:
     graceful-fs "^4.1.6"
 
-jsonwebtoken@^8.0.0, jsonwebtoken@^8.2.0:
+jsonwebtoken@^8.0.0, jsonwebtoken@^8.2.0, jsonwebtoken@^8.5.1:
   version "8.5.1"
   resolved "https://registry.yarnpkg.com/jsonwebtoken/-/jsonwebtoken-8.5.1.tgz#00e71e0b8df54c2121a1f26137df2280673bcc0d"
   integrity sha512-XjwVfRS6jTMsqYs0EsuJ4LGxXV14zQybNd4L2r0UvbVnSF9Af8x7p5MzbJ90Ioz/9TI41/hTCvznF/loiSzn8w==
@@ -12185,7 +12219,7 @@ utils-merge@1.0.1:
   resolved "https://registry.yarnpkg.com/utils-merge/-/utils-merge-1.0.1.tgz#9f95710f50a267947b2ccc124741c1028427e713"
   integrity sha1-n5VxD1CiZ5R7LMwSR0HBAoQn5xM=
 
-uuid@^3.1.0, uuid@^3.3.2:
+uuid@^3.1.0, uuid@^3.3.2, uuid@^3.4.0:
   version "3.4.0"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.4.0.tgz#b23e4358afa8a202fe7a100af1f5f883f02007ee"
   integrity sha512-HjSDRw6gZE5JMggctHBcjVak08+KEVhSIiDzFnT9S9aegmp85S/bReBVTb4QTFaRNptJ9kuYaNhnbNEOkbKb/A==
