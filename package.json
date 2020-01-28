@@ -28,7 +28,7 @@
     "test": "npm run eslint && npm run coverage",
     "eslint": "eslint src/. test/. --config .eslintrc.js",
     "dev": "cross-env DEBUG=nuxt:* nodemon --ignore 'client/static/*.js' src/",
-    "start": "npm run build && node src/",
+    "start": "node src/",
     "jest": "jest"
   },
   "dependencies": {
