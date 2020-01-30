@@ -66,7 +66,7 @@ import { required, sameAs, email } from 'vuelidate/lib/validators'
 import { mapMutations } from 'vuex'
 
 export default {
-  layout: 'home',
+  layout: 'account',
   name: 'SignUp',
   middleware: 'notAuth',
   mixins: [validationMixin],

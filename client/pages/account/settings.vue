@@ -107,7 +107,7 @@ import { required, email } from 'vuelidate/lib/validators'
 import { mapMutations, mapActions, mapState } from 'vuex'
 
 export default {
-  layout: 'dashboard',
+  layout: 'account',
   middleware: 'auth',
   mixins: [validationMixin],
   data() {

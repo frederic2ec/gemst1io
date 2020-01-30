@@ -2,8 +2,8 @@
   <v-app>
     <Navigation />
     <Snackbar />
-    <v-content style="padding: 0px 0px 40px;">
-      <v-container fill-height fluid ma-0 pa-0>
+    <v-content>
+      <v-container fill-height fluid>
         <nuxt />
       </v-container>
     </v-content>

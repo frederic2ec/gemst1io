@@ -6,6 +6,9 @@
           Gemstone
         </router-link>
       </v-toolbar-title>
+      <v-btn text link href="/#home">Home</v-btn>
+      <v-btn text href="/#features">Features</v-btn>
+      <v-btn text href="/#pricing">Pricing</v-btn>
       <v-spacer />
       <v-btn
         v-if="!this.$store.state.auth.payload"

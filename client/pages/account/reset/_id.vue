@@ -38,7 +38,7 @@
 import { mapMutations } from 'vuex'
 
 export default {
-  layout: 'home',
+  layout: 'account',
   middleware: 'notAuth',
   data() {
     return {
