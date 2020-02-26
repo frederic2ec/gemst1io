@@ -68,7 +68,7 @@
     "feathers-hooks-common": "^4.20.7",
     "feathers-mailer": "^3.0.1",
     "feathers-mongoose": "^8.1.0",
-    "feathers-vuex": "^1.7.2",
+    "feathers-vuex": "^3.4.0",
     "fs": "0.0.1-security",
     "fs-blob-store": "^5.2.1",
     "helmet": "^3.21.2",
